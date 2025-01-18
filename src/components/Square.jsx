@@ -2,9 +2,13 @@ export default function Square({ value, onSquareClick }) {
   let squareValues;
 
   if (value === "X") {
-    squareValues = <span className="text-red-500">{value}</span>;
+    squareValues = (
+      <span className="text-red-500">{!value ? value : "💰"}</span>
+    );
   } else {
-    squareValues = <span className="text-yellow-500">{value}</span>;
+    squareValues = (
+      <span className="text-yellow-500">{!value ? value : "❤"}</span>
+    );
   }
 
   return (

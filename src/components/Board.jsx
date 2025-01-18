@@ -22,9 +22,9 @@ export default function Board({ xIsNext, squares, onPlay }) {
   let status;
 
   if (winner) {
-    status = `Winner: ${winner}`;
+    status = `Winner: ${winner === "X" ? "Money" : "Love"}`;
   } else {
-    status = "Next Player " + (xIsNext ? "X" : "O");
+    status = "Next Player " + (xIsNext ? "Money" : "Love");
   }
 
   return (
